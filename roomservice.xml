@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="gitlab" fetch="https://gitlab.com/" />
+  
+  <!-- Removals -->
+  <remove-project name="LineageOS/android_frameworks_base" /> 
+
+  <!-- Device -->
+  <project name="sailfish-i9100/device_samsung_i9100" path="device/samsung/i9100" remote="github" revision="hybris-16.0" />
+  <project name="sailfish-i9100/device_samsung_galaxys2-common" path="device/samsung/galaxys2-common" remote="github" revision="hybris-16.0" />
+
+  <!-- Kernel -->
+  <project name="linusdan/kernel_samsung_smdk4412" path="kernel/samsung/smdk4412" remote="gitlab" revision="lineage-17.0" />
+
+  <!-- Vendor -->
+  <project name="linusdan/vendor_samsung" path="vendor/samsung" remote="github" revision="pie" />
+
+  <!-- Extras -->
+  <project name="sailfish-i9100/frameworks_base" path="frameworks/base" remote="github" revision="hybris-16.0" />
+  <project name="rINanDO/android_hardware_samsung" path="hardware/samsung" remote="github" revision="lineage-16.0" />  
+  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-16.0" />     
+</manifest>
