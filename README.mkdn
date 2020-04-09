@@ -1,27 +1,37 @@
 # LineageOS system-as-root
 Build Lineage 16.0 system-as-root for SailfishOS
 
-1. mkdir -p lineage-sar
+### Sync ###
 
-2. cd lineage-sar
+```bash
+# Create folder of build:
+$ mkdir -p lineage-sar && cd lineage-sar
 
-3. Initialize your local repository using the Lineage trees, use a command
-  repo init -u git://github.com/LineageOS/android.git -b lineage-16.0
+# Initialize your local repository using the Lineage trees, use a command
+$ repo init -u git://github.com/LineageOS/android.git -b lineage-16.0
 
-4. Clone my repo:
-  git clone https://github.com/sailfish-i9100/lineage-sar.git -b master .repo/local_manifests
+# Clone my local repo
+$ git clone https://github.com/sailfish-i9100/lineage-sar.git -b master .repo/local_manifests
 
-5. Sync the repo:
-  repo sync --no-tags --no-clone-bundle --force-sync -c
-
-6. Add vendorsetup.sh in device/samsung/i9100:
- cd device/samsung/i9100 && wget -c https://raw.githubusercontent.com/linusdan/lineage_manifests/lineage-16.0/vendorsetup.sh && cd ../../..
-
-7. To build:
-  . build/envsetup.sh
-  lunch (choose i9100)
-  brunch i9100
+# Sync
+$ repo sync -c --force-sync --no-clone-bundle --no-tags
 ```
+
+### Build ###
+
+```bash
+# Add vendorsetup.sh in device/samsung/i9100:
+ $  cd device/samsung/i9100 && wget -c https://raw.githubusercontent.com/linusdan/lineage_manifests/lineage-16.0/vendorsetup.sh && cd ../../../..
+
+# Set up environment
+ $ . build/envsetup.sh
+
+# Generate configuration of device
+ $ lunch lineage_i9100-userdebug
+
+# Build the code
+ $ brunch i9100
+ ```
 
 
 Credits
