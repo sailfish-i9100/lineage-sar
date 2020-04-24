@@ -7,7 +7,7 @@
 
   <!-- Device -->
   <project name="sailfish-i9100/device_samsung_i9100" path="device/samsung/i9100" remote="github" revision="hybris-16.0" />
-  <project name="sailfish-i9100/device_samsung_galaxys2-common" path="device/samsung/galaxys2-common" remote="github" revision="hybris-16.0" />
+  <project name="sailfish-i9100/device_samsung_galaxys2-common" path="device/samsung/galaxys2-common" remote="github" revision="hybris-16.0-sar" />
 
   <!-- Kernel -->
   <project name="linusdan/kernel_samsung_smdk4412" path="kernel/samsung/smdk4412" remote="gitlab" revision="lineage-17.0" />
